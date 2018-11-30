@@ -1,6 +1,11 @@
 # First we'll import the os module
 # This will allow us to create file paths across operating systems
 import os
+#Create output directory
+saving = os.path.join('..', 'Outputs')
+if not os.path.exists(saving):
+    os.mkdir(saving)
+
 # Module for reading CSV files
 import csv
 csvpath = os.path.join('..', 'Resources', 'election_data.csv')
