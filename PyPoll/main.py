@@ -55,7 +55,7 @@ results.sort(reverse=True, key=lambda x:x[2])
 ######################################
 print(f"Election Results\n-------------------------\nTotal Votes: {total_vote}\n-------------------------")
 for candidate,perct,vote in results:
-    print("{0}: {1:2.3f}% ({2})".format(candidate, perct, vote))
+    print(f"{candidate}: {perct:2.3f}% ({vote})")
 print(f"-------------------------\nWinner: {results[0][0]}\n-------------------------")
 
 ##################################
@@ -66,5 +66,5 @@ my_file = open(outpath, "w")
 
 print(f"Election Results\n-------------------------\nTotal Votes: {total_vote}\n-------------------------", file=my_file)
 for candidate,perct,vote in results:
-    print("{0}: {1:2.3f}% ({2})".format(candidate, perct, vote), file=my_file)
+    print(f"{candidate}: {perct:2.3f}% ({vote})", file=my_file)
 print(f"-------------------------\nWinner: {results[0][0]}\n-------------------------", file=my_file)

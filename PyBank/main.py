@@ -59,11 +59,11 @@ great_decrease = min(change)
 month_decrease = [str_date[i] for i in range(len(str_date)) if change[i] == great_decrease]
 
 # Print to terminal
-print("Financial Analysis\n----------------------------\nTotal Months: {0}\nTotal: ${1}\nAverage  Change: ${2:8.2f}\nGreatest Increase in Profits: {3} (${4})\nGreatest Decrease in Profits: {5} (${6})".format(int_total_month, total_revenue, avg_change, month_increase[0], great_increase, month_decrease[0], great_decrease))
+print(f"Financial Analysis\n----------------------------\nTotal Months: {int_total_month}\nTotal: ${total_revenue}\nAverage  Change: ${avg_change:8.2f}\nGreatest Increase in Profits: {month_increase[0]} (${great_increase})\nGreatest Decrease in Profits: {month_decrease[0]} (${great_decrease})")
 
 ##################################
 # Print to output file
 ##################################
 outpath = os.path.join('..', 'Outputs', 'budget_data.txt')
 my_file = open(outpath, "w")
-print("Financial Analysis\n----------------------------\nTotal Months: {0}\nTotal: ${1}\nAverage  Change: ${2:8.2f}\nGreatest Increase in Profits: {3} (${4})\nGreatest Decrease in Profits: {5} (${6})".format(int_total_month, total_revenue, avg_change, month_increase[0], great_increase, month_decrease[0], great_decrease), file=my_file)
+print(f"Financial Analysis\n----------------------------\nTotal Months: {int_total_month}\nTotal: ${total_revenue}\nAverage  Change: ${avg_change:8.2f}\nGreatest Increase in Profits: {month_increase[0]} (${great_increase})\nGreatest Decrease in Profits: {month_decrease[0]} (${great_decrease})", file=my_file)
